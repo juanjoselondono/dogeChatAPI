@@ -19,6 +19,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 socket.connect(server);
 router(app)
+app.use('/chat', express.static(__dirname + './public'))
 app.use(express.static('./public'))
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");

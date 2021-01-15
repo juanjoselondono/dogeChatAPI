@@ -22,5 +22,14 @@ router.get('/:userId', function(req, res) {
             response.error(req, res, 500, err);
         });
 });
+router.delete('/:chatId', function(req, res) {
+    controller.deleteChat(req.params.chatId)
+    .then(()=>{
+        response.success(req,res,200, `Chat [${req.params.chatId}] deleted`)
+    })
+    .catch(e=>{
+        response.error(req, res, 500, e);
+    })
+});
 
 module.exports = router;

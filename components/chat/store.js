@@ -4,6 +4,11 @@ function addChat(chat) {
     const myChat = new Model(chat);
     return myChat.save();
 }
+function removeChat(id) {
+    return Model.deleteOne({
+        _id: id
+    });
+}
 function listChats(userId) {
 	return new Promise((resolve, reject) => {
 		let filter = {};
@@ -28,5 +33,6 @@ function listChats(userId) {
 
 module.exports = {
     add: addChat,
-    list: listChats,
+	list: listChats,
+	delete:removeChat
 }

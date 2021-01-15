@@ -1,13 +1,14 @@
 const e = require("express")
 const store = require('./store')
-function addUser(name, mail){
+function addUser(name, mail, password){
     return new Promise((resolve, reject)=>{
         const fulluser = {
             name : name,
             mail: mail,
+            password: password
         } 
-        if(!name || !mail){
-            console.error('[messsage/controller] name or mail not defined')
+        if(!name || !mail || !password){
+            console.error('[messsage/controller] body not defined')
             reject();
         }
         else{

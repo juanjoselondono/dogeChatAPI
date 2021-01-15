@@ -20,6 +20,7 @@ function addMessage(chat,user, message, file){
         }
         // socket.io.emit('message',fullmessage)
         store.add(fullmessage)
+        console.log(fullmessage)
         resolve(fullmessage);
     })
 }

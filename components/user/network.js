@@ -17,7 +17,7 @@ router.get('/', (req, res)=>{
         })
 }) 
 router.post('/', (req, res)=>{
-    controller.addUser(req.body.name, req.body.mail)//escribe los datos recibidos
+    controller.addUser(req.body.name, req.body.mail, req.body.password)//escribe los datos recibidos
         .then(()=>{
             response.success(req, res, 200,"Everything is O.K") //verifica si los datos se enviaron completamene
             console.log(req.body.name)
