@@ -1,3 +1,4 @@
-<h1>Dogechat-API</h1>
-<img style = {width:"50px"; heigth:"50px"} src="https://crhscountyline.com/wp-content/uploads/2020/03/Capture.png">
-<p>It's the official Api for dogeChat</p>
+# Dogechat-API
+Official API for Doge chat.
+## Installation
+![image](http://assets.stickpng.com/thumbs/5845e5e9fb0b0755fa99d7e5.png = 250x250)
