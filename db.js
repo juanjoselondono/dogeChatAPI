@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config({path:`${__dirname}/config.env`});
+const dotenv = require('dotenv').config({path:`${__dirname}/.env`});
 const url = process.env.DB_URL;
 const messages = `${url}/message`;
 const db = require('mongoose');
